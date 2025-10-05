@@ -27,20 +27,3 @@ To "invalidate" a token before expiry (e.g., during logout), we maintain a **bla
 4 **Subsequent Requests** – Blacklisted tokens rejected by `JwtAuthFilter`
 
 ---
-
-##  API Endpoints
-
-###  `POST /auth/login`
-**Request:**
-```json
-{
-  "username": "john",
-  "password": "password"
-}
-
-**Response:**
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiJ9..."
-}
-
