@@ -39,6 +39,7 @@ To "invalidate" a token before expiry (e.g., during logout), we maintain a **bla
 }
 
 **Response:**
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiJ9..."
 }
