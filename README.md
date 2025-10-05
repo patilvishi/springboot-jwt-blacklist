@@ -1,6 +1,6 @@
-# ?? Day 24 – JWT Logout & Token Blacklisting in Spring Boot
+#  Day 24 – JWT Logout & Token Blacklisting in Spring Boot
 
-## ?? Goal
+##  Goal
 Implement **secure logout** in a JWT-based Spring Boot application using **token blacklisting**.
 
 JWTs are stateless — once issued, they remain valid until they expire.  
@@ -8,9 +8,9 @@ To "invalidate" a token before expiry (e.g., during logout), we maintain a **bla
 
 ---
 
-## ?? Project Setup
+##  Project Setup
 
-### ?? Tech Stack
+###  Tech Stack
 - Spring Boot 3.x  
 - Spring Security  
 - Spring Data JPA (H2 in-memory DB)  
@@ -19,18 +19,18 @@ To "invalidate" a token before expiry (e.g., during logout), we maintain a **bla
 
 ---
 
-## ?? How It Works
+##  How It Works
 
-1?? **Login** – Generates JWT token for valid user  
-2?? **Access Protected APIs** – Token used in `Authorization: Bearer <token>` header  
-3?? **Logout** – Token added to blacklist  
-4?? **Subsequent Requests** – Blacklisted tokens rejected by `JwtAuthFilter`
+1 **Login** – Generates JWT token for valid user  
+2 **Access Protected APIs** – Token used in `Authorization: Bearer <token>` header  
+3 **Logout** – Token added to blacklist  
+4 **Subsequent Requests** – Blacklisted tokens rejected by `JwtAuthFilter`
 
 ---
 
-## ?? API Endpoints
+##  API Endpoints
 
-### ?? `POST /auth/login`
+###  `POST /auth/login`
 **Request:**
 ```json
 {
